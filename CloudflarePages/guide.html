@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Use RoundClear AI — Complete Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07090f;--bg2:#0d1017;--bg3:#131720;--bg4:#1a2030;
+  --gold:#e6b84a;--gold2:#f0c866;--goldf:rgba(230,184,74,.08);
+  --green:#22c55e;--bluef:rgba(96,165,250,.08);--blue:#60a5fa;
+  --red:#f87171;--redf:rgba(248,113,113,.08);
+  --text:#e8eaf0;--text2:#8892a4;--text3:#4a5568;
+  --border:#1e2535;--border2:#2a3448;
+  --r:12px;--r2:8px;--r3:6px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6}
+nav{position:sticky;top:0;z-index:100;background:rgba(7,9,15,.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:14px 32px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:30px;height:30px;background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#07090f;font-family:'Syne',sans-serif}
+.logo-name{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--gold)}
+.nav-links{display:flex;gap:4px}
+.nav-link{font-size:13px;color:var(--text2);text-decoration:none;padding:6px 12px;border-radius:var(--r3);transition:all .2s}
+.nav-link:hover{color:var(--text);background:var(--bg3)}
+.nav-cta{font-size:13px;font-weight:600;color:#07090f;background:linear-gradient(135deg,var(--gold),var(--gold2));padding:7px 16px;border-radius:var(--r3);text-decoration:none}
+.hero{text-align:center;padding:64px 24px 48px}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--goldf);border:1px solid rgba(230,184,74,.2);border-radius:20px;padding:5px 16px;font-size:12px;color:var(--gold);font-weight:600;margin-bottom:20px;letter-spacing:.5px;text-transform:uppercase}
+.hero h1{font-family:'Syne',sans-serif;font-size:44px;font-weight:800;letter-spacing:-2px;line-height:1.05;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{font-size:16px;color:var(--text2);max-width:500px;margin:0 auto 28px;line-height:1.7}
+.toc{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:560px}
+.toc a{display:flex;align-items:center;gap:5px;padding:6px 14px;background:var(--bg3);border:1px solid var(--border2);border-radius:20px;font-size:12px;color:var(--text2);text-decoration:none;transition:all .2s;font-weight:500}
+.toc a:hover{border-color:var(--gold);color:var(--gold);background:var(--goldf)}
+.container{max-width:760px;margin:0 auto;padding:0 24px 80px}
+.section{margin-bottom:48px}
+.sec-hdr{display:flex;align-items:center;gap:14px;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.sec-num{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;color:#07090f;flex-shrink:0}
+.sec-num.b{background:linear-gradient(135deg,var(--blue),#3b82f6)}
+.sec-num.g{background:linear-gradient(135deg,var(--green),#16a34a)}
+.sec-num.r{background:linear-gradient(135deg,var(--red),#ef4444)}
+.sec-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.5px}
+.sec-sub{font-size:13px;color:var(--text2);margin-top:2px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{padding:18px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r)}
+.card-icon{font-size:24px;margin-bottom:10px}
+.card-title{font-weight:600;font-size:14px;margin-bottom:5px}
+.card-desc{font-size:13px;color:var(--text2);line-height:1.6}
+.steps{display:flex;flex-direction:column}
+.step{display:flex;position:relative}
+.step:not(:last-child)::after{content:'';position:absolute;left:19px;top:40px;bottom:0;width:2px;background:var(--border)}
+.step-n{width:40px;flex-shrink:0;padding-top:2px;display:flex;justify-content:center}
+.step-circle{width:38px;height:38px;border-radius:50%;background:var(--bg3);border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:13px;color:var(--gold);z-index:1;flex-shrink:0}
+.step-body{flex:1;padding:0 0 30px 20px}
+.step-title{font-weight:600;font-size:15px;margin-bottom:6px;padding-top:7px}
+.step-desc{font-size:14px;color:var(--text2);line-height:1.65}
+.tip{display:flex;gap:6px;margin-top:10px;padding:8px 12px;background:var(--goldf);border:1px solid rgba(230,184,74,.15);border-radius:var(--r3);font-size:12px;color:var(--gold);line-height:1.5}
+.warn{display:flex;gap:6px;margin-top:10px;padding:8px 12px;background:var(--redf);border:1px solid rgba(248,113,113,.15);border-radius:var(--r3);font-size:12px;color:var(--red);line-height:1.5}
+.info{display:flex;gap:6px;margin-top:12px;padding:8px 12px;background:var(--bluef);border:1px solid rgba(96,165,250,.15);border-radius:var(--r3);font-size:12px;color:var(--blue);line-height:1.5}
+code{background:var(--bg4);border:1px solid var(--border2);border-radius:4px;padding:2px 7px;font-family:'DM Mono',monospace;font-size:12px;color:var(--gold)}
+.modes{display:flex;flex-direction:column;gap:10px}
+.mode{display:flex;gap:14px;padding:16px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r)}
+.mode-icon{font-size:26px;width:38px;text-align:center;flex-shrink:0;padding-top:3px}
+.mode-name{font-weight:700;font-size:15px;margin-bottom:5px}
+.mode-desc{font-size:13px;color:var(--text2);line-height:1.65}
+.badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px;margin-left:8px;vertical-align:middle}
+.b-green{background:rgba(34,197,94,.15);color:var(--green)}
+.b-gold{background:var(--goldf);color:var(--gold);border:1px solid rgba(230,184,74,.2)}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pcard{padding:22px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);position:relative;overflow:hidden}
+.pcard.hot{border-color:rgba(230,184,74,.35);background:var(--goldf)}
+.pcard.hot::after{content:'BEST VALUE';position:absolute;top:13px;right:-24px;background:var(--gold);color:#07090f;font-size:9px;font-weight:800;padding:3px 32px;transform:rotate(35deg);letter-spacing:1px}
+.pname{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:10px}
+.pamount{font-family:'Syne',sans-serif;font-size:34px;font-weight:800;letter-spacing:-1px;line-height:1}
+.pamount sub{font-size:15px;font-weight:400;color:var(--text2);letter-spacing:0}
+.pdur{font-size:13px;color:var(--text2);margin:6px 0 16px}
+.plist{list-style:none;display:flex;flex-direction:column;gap:8px}
+.plist li{font-size:13px;color:var(--text2);display:flex;align-items:flex-start;gap:8px;line-height:1.4}
+.plist li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
+.faqs{display:flex;flex-direction:column;gap:2px}
+.faq{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;font-size:14px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none;transition:color .2s}
+.faq-q:hover{color:var(--gold)}
+.faq-arr{color:var(--text3);font-size:18px;flex-shrink:0;transition:transform .25s}
+.faq.open .faq-arr{transform:rotate(45deg);color:var(--gold)}
+.faq-a{display:none;padding:12px 18px 16px;font-size:13px;color:var(--text2);line-height:1.75;border-top:1px solid var(--border)}
+.faq.open .faq-a{display:block}
+.cbox{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r);padding:32px;text-align:center}
+.cbox h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:8px}
+.cbox p{font-size:14px;color:var(--text2);margin-bottom:22px;line-height:1.6}
+.cbtns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.cbtn{display:inline-flex;align-items:center;gap:7px;padding:11px 22px;border-radius:var(--r2);font-size:14px;font-weight:600;text-decoration:none;transition:all .2s}
+.cbtn.p{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#07090f}
+.cbtn.p:hover{opacity:.9;transform:translateY(-1px)}
+.cbtn.s{background:var(--bg3);border:1px solid var(--border2);color:var(--text2)}
+.cbtn.s:hover{border-color:var(--gold);color:var(--gold)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:4px 0 48px}
+.fi{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.fi.v{opacity:1;transform:none}
+footer{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:12px;color:var(--text3)}
+footer a{color:var(--text2);text-decoration:none}
+footer a:hover{color:var(--gold)}
+@media(max-width:580px){
+  .hero h1{font-size:30px}
+  .grid2,.pgrid{grid-template-columns:1fr}
+  nav{padding:12px 16px}
+  .nav-links{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-mark">R</div>
+    <span class="logo-name">RoundClear AI</span>
+  </a>
+  <div class="nav-links">
+    <a href="#install" class="nav-link">Install</a>
+    <a href="#setup" class="nav-link">Setup</a>
+    <a href="#usage" class="nav-link">How to Use</a>
+    <a href="#pricing" class="nav-link">Pricing</a>
+    <a href="#faq" class="nav-link">FAQ</a>
+  </div>
+  <a href="download.html" class="nav-cta">⬇ Download</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">📖 Usage Guide</div>
+  <h1>Get Started with<br><em>RoundClear AI</em></h1>
+  <p>Everything you need — from install to your first live interview. Takes 5 minutes to set up.</p>
+  <div class="toc">
+    <a href="#what">🎯 What is it</a>
+    <a href="#install">💻 Install</a>
+    <a href="#setup">⚙️ Setup</a>
+    <a href="#audio">🔊 Audio Modes</a>
+    <a href="#usage">🎙️ Live Interview</a>
+    <a href="#pricing">💰 Pricing</a>
+    <a href="#faq">❓ FAQ</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- WHAT IS -->
+  <div class="section fi" id="what">
+    <div class="sec-hdr">
+      <div class="sec-num">🎯</div>
+      <div><div class="sec-title">What is RoundClear AI?</div><div class="sec-sub">Understand what the app does in 30 seconds</div></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><div class="card-icon">🎙️</div><div class="card-title">Listens to your interview</div><div class="card-desc">Captures audio live from Zoom, Teams, Google Meet, or your microphone — automatically, no button pressing.</div></div>
+      <div class="card"><div class="card-icon">⚡</div><div class="card-title">Transcribes instantly</div><div class="card-desc">Converts the interviewer's spoken question to text using Groq Whisper AI in under 3 seconds.</div></div>
+      <div class="card"><div class="card-icon">🤖</div><div class="card-title">Generates expert answers</div><div class="card-desc">Claude Sonnet AI creates precise, technical answers tailored to your role, company, and round type.</div></div>
+      <div class="card"><div class="card-icon">🎯</div><div class="card-title">You speak confidently</div><div class="card-desc">Read the answer on screen and deliver it naturally — no memorisation, no hesitation.</div></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- INSTALL -->
+  <div class="section fi" id="install">
+    <div class="sec-hdr">
+      <div class="sec-num">1</div>
+      <div><div class="sec-title">Download & Install</div><div class="sec-sub">Less than 2 minutes — Windows 10/11 only for now</div></div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n"><div class="step-circle">01</div></div>
+        <div class="step-body">
+          <div class="step-title">Download the installer</div>
+          <div class="step-desc">Go to <a href="download.html" style="color:var(--gold)">roundclear.in/download.html</a> → click <strong>Download for Windows</strong>. File: <code>RoundClear.AI.Setup.1.0.1.exe</code> (~90 MB).</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n"><div class="step-circle">02</div></div>
+        <div class="step-body">
+          <div class="step-title">Run the installer</div>
+          <div class="step-desc">Open the downloaded file from your Downloads folder.</div>
+          <div class="warn">⚠️ If Windows SmartScreen appears — click <strong>"More Info"</strong> → <strong>"Run Anyway"</strong>. This is safe. The warning appears because we are an independent developer without a code signing certificate.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n"><div class="step-circle">03</div></div>
+        <div class="step-body">
+          <div class="step-title">Complete installation & open</div>
+          <div class="step-desc">Click <strong>Next → Install → Finish</strong>. A <strong>RoundClear AI</strong> shortcut appears on your Desktop. Double-click it to open.</div>
+          <div class="tip">💡 Position the app window on the side of your screen so it stays visible during the interview without covering your video call.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SETUP -->
+  <div class="section fi" id="setup">
+    <div class="sec-hdr">
+      <div class="sec-num">2</div>
+      <div><div class="sec-title">First Time Setup</div><div class="sec-sub">Fill these in before starting your session</div></div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n"><div class="step-circle">01</div></div>
+        <div class="step-body">
+          <div class="step-title">Company Name</div>
+          <div class="step-desc">Enter the company you're interviewing at — e.g. <code>TCS</code>, <code>Infosys</code>, <code>Wipro</code>, <code>Accenture</code>, <code>HCL</code>. The AI tailors answers to that company's interview style.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n"><div class="step-circle">02</div></div>
+        <div class="step-body">
+          <div class="step-title">Your Target Role</div>
+          <div class="step-desc">Type your role — e.g. <code>Security Engineer</code>, <code>DevOps Engineer</code>, <code>Java Developer</code>, <code>Data Analyst</code>. This changes the depth and focus of every answer.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n"><div class="step-circle">03</div></div>
+        <div class="step-body">
+          <div class="step-title">Round Type</div>
+          <div class="step-desc">
+            Select <code>Technical</code>, <code>HR</code>, or <code>Coding</code>.<br>
+            <strong>Technical</strong> — deep technical answers with tools and mechanisms<br>
+            <strong>HR</strong> — behavioral answers in STAR format<br>
+            <strong>Coding</strong> — logic explanation with time complexity
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n"><div class="step-circle">04</div></div>
+        <div class="step-body">
+          <div class="step-title">Upload Resume <span style="font-weight:400;font-size:13px;color:var(--text3)">(optional but recommended)</span></div>
+          <div class="step-desc">Upload your resume as PDF or Word file. The app extracts your tech stack to improve transcription accuracy — tools like <code>Kubernetes</code> or <code>CrowdStrike</code> in your resume won't get misheared.</div>
+          <div class="tip">💡 Always upload your resume — it noticeably improves answer relevance and transcription quality.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n"><div class="step-circle">05</div></div>
+        <div class="step-body">
+          <div class="step-title">Select Audio Mode</div>
+          <div class="step-desc">Choose how the app captures audio. See <a href="#audio" style="color:var(--gold)">Audio Modes</a> below to pick the right one for your interview type.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- AUDIO -->
+  <div class="section fi" id="audio">
+    <div class="sec-hdr">
+      <div class="sec-num b">🔊</div>
+      <div><div class="sec-title">Audio Modes</div><div class="sec-sub">Wrong mode = no transcription — pick carefully</div></div>
+    </div>
+    <div class="modes">
+      <div class="mode">
+        <div class="mode-icon">🖥️</div>
+        <div>
+          <div class="mode-name">System Audio <span class="badge b-green">RECOMMENDED</span></div>
+          <div class="mode-desc">Captures everything playing through your computer — Zoom, Teams, Google Meet. The interviewer's voice is captured directly, clean and clear.<br><br><strong style="color:var(--text)">Use for:</strong> All online interviews on any video call platform.</div>
+        </div>
+      </div>
+      <div class="mode">
+        <div class="mode-icon">🎤</div>
+        <div>
+          <div class="mode-name">Microphone</div>
+          <div class="mode-desc">Captures audio from your physical microphone — picks up sound in the room.<br><br><strong style="color:var(--text)">Use for:</strong> In-person interviews, walk-in interviews, phone calls on speaker.</div>
+        </div>
+      </div>
+      <div class="mode">
+        <div class="mode-icon">🔀</div>
+        <div>
+          <div class="mode-name">Both <span class="badge b-gold">FULL COVERAGE</span></div>
+          <div class="mode-desc">Captures system audio and microphone simultaneously.<br><br><strong style="color:var(--text)">Use for:</strong> Hybrid interviews — some participants remote, some in the room.</div>
+        </div>
+      </div>
+    </div>
+    <div class="info">ℹ️ System Audio only works in the installed .exe app — not in developer/source mode.</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- LIVE INTERVIEW -->
+  <div class="section fi" id="usage">
+    <div class="sec-hdr">
+      <div class="sec-num g">3</div>
+      <div><div class="sec-title">During Your Interview</div><div class="sec-sub">Step by step while the interview is live</div></div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n"><div class="step-circle">01</div></div>
+        <div class="step-body">
+          <div class="step-title">Start session 5 minutes before</div>
+          <div class="step-desc">Open RoundClear AI → fill in company, role, round → upload resume → select audio mode → click <strong>Start Free Session</strong>. Do this before the interviewer joins — not while they're waiting.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n"><div class="step-circle">02</div></div>
+        <div class="step-body">
+          <div class="step-title">App listens automatically</div>
+          <div class="step-desc">No button to press. The app listens continuously. As soon as the interviewer finishes speaking, the question is transcribed and sent to the AI automatically.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n"><div class="step-circle">03</div></div>
+        <div class="step-body">
+          <div class="step-title">Glance at KEY POINTS first</div>
+          <div class="step-desc"><strong>KEY POINTS</strong> are 4 bullet facts at the top of every answer. Read them in 3 seconds to get the core concept before you start speaking.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n"><div class="step-circle">04</div></div>
+        <div class="step-body">
+          <div class="step-title">Speak the SPEAK THIS paragraph</div>
+          <div class="step-desc"><strong>SPEAK THIS</strong> is written exactly how you should say it aloud. Read it naturally at a comfortable pace. Simple questions give ~100 words, deep technical questions give ~200 words, scenario questions give ~250 words.</div>
+          <div class="tip">💡 Don't read robotically word for word. Glance at a sentence, look up, speak it naturally. Small variations are fine and actually sound more confident.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n"><div class="step-circle">05</div></div>
+        <div class="step-body">
+          <div class="step-title">Check FOLLOW-UP READY</div>
+          <div class="step-desc">After each answer, 3 likely follow-up questions are shown. Use the gap while the interviewer processes your answer to mentally prepare for what's coming next.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n"><div class="step-circle">06</div></div>
+        <div class="step-body">
+          <div class="step-title">Watch the timer bar</div>
+          <div class="step-desc">The top bar shows remaining free time — <strong>30 minutes</strong> on the free plan. When it hits zero the payment screen appears.</div>
+          <div class="warn">⚠️ A typical interview is 45–60 minutes. If you're expecting a long session, upgrade to the 120 min pack <strong>before</strong> your interview starts — not mid-session.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PRICING -->
+  <div class="section fi" id="pricing">
+    <div class="sec-hdr">
+      <div class="sec-num">💰</div>
+      <div><div class="sec-title">Pricing</div><div class="sec-sub">Start free — pay only when you need more time</div></div>
+    </div>
+    <div class="pgrid">
+      <div class="pcard">
+        <div class="pname">Free</div>
+        <div class="pamount">₹0</div>
+        <div class="pdur">30 minutes — every session</div>
+        <ul class="plist">
+          <li>Full AI answer generation</li>
+          <li>Resume upload</li>
+          <li>All audio modes</li>
+          <li>30 min per session</li>
+          <li>No account needed</li>
+        </ul>
+      </div>
+      <div class="pcard hot">
+        <div class="pname">Pro Pack</div>
+        <div class="pamount">₹2,500 <sub>/ $30</sub></div>
+        <div class="pdur">120 minutes — never expires</div>
+        <ul class="plist">
+          <li>Everything in Free</li>
+          <li>120 minutes total</li>
+          <li>Carries across sessions</li>
+          <li>UPI, card, net banking</li>
+          <li>Activates instantly</li>
+        </ul>
+      </div>
+    </div>
+    <div class="info">ℹ️ The 120 minutes carry over across multiple sessions — they don't expire at the end of one interview. Use them across as many interviews as you need.</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FAQ -->
+  <div class="section fi" id="faq">
+    <div class="sec-hdr">
+      <div class="sec-num r">❓</div>
+      <div><div class="sec-title">Common Issues & Fixes</div><div class="sec-sub">Quick answers to the most frequent problems</div></div>
+    </div>
+    <div class="faqs">
+      <div class="faq">
+        <div class="faq-q" onclick="tf(this)">App is not picking up audio from Zoom / Teams<span class="faq-arr">+</span></div>
+        <div class="faq-a">Make sure you selected <strong>System Audio</strong> mode — not Microphone. System Audio captures sound through your speakers or headphones. Also check that Windows volume is not muted and the video call audio is actually playing through the computer (not a phone).</div>
+      </div>
+      <div class="faq">
+        <div class="faq-q" onclick="tf(this)">Answer is not showing or takes too long<span class="faq-arr">+</span></div>
+        <div class="faq-a">Almost always a slow internet connection. The app sends audio to Groq for transcription, then to Claude for answer generation — both need a stable connection. Use WiFi, not mobile hotspot, during interviews. If consistently slow, check your backend is still running on Railway.</div>
+      </div>
+      <div class="faq">
+        <div class="faq-q" onclick="tf(this)">Question was transcribed incorrectly<span class="faq-arr">+</span></div>
+        <div class="faq-a">Whisper AI can mishear technical terms. To improve: upload your resume (adds your tech stack as hints to the transcription), ensure the interviewer's audio is clear, and avoid speaking over each other. If one question comes through wrong — wait for the next one, don't try to correct it mid-interview.</div>
+      </div>
+      <div class="faq">
+        <div class="faq-q" onclick="tf(this)">Windows blocked the app or shows "Unknown Publisher"<span class="faq-arr">+</span></div>
+        <div class="faq-a">Click <strong>"More Info"</strong> on the SmartScreen popup → then <strong>"Run Anyway"</strong>. The app is safe. This warning appears because we are an independent developer without a code signing certificate (these cost thousands of rupees). We are working on getting this for a future version.</div>
+      </div>
+      <div class="faq">
+        <div class="faq-q" onclick="tf(this)">Payment went through but minutes were not added<span class="faq-arr">+</span></div>
+        <div class="faq-a">This can happen if the app crashed right after payment. Email <a href="mailto:support@roundclear.in" style="color:var(--gold)">support@roundclear.in</a> with your Razorpay payment ID (starts with <code>pay_</code>) and we will manually activate your minutes within 24 hours.</div>
+      </div>
+      <div class="faq">
+        <div class="faq-q" onclick="tf(this)">Can I use RoundClear AI on Mac?<span class="faq-arr">+</span></div>
+        <div class="faq-a">Mac version is in development. Email <a href="mailto:support@roundclear.in" style="color:var(--gold)">support@roundclear.in</a> with subject <strong>"Mac Waitlist"</strong> and you will be notified as soon as it's available.</div>
+      </div>
+      <div class="faq">
+        <div class="faq-q" onclick="tf(this)">Is my audio recorded or stored anywhere?<span class="faq-arr">+</span></div>
+        <div class="faq-a">No. Audio is processed in real-time and immediately discarded after transcription. We do not store any recordings. The transcribed text is passed to Claude for answer generation only and is not logged or saved on our servers.</div>
+      </div>
+      <div class="faq">
+        <div class="faq-q" onclick="tf(this)">The app window disappeared during my interview<span class="faq-arr">+</span></div>
+        <div class="faq-a">Click the <strong>RoundClear AI</strong> icon in your Windows taskbar at the bottom of the screen. You can also press <code>Alt + Tab</code> to switch back to it. Before starting your next interview, keep the app window visible on the side of your screen so it doesn't get buried.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section fi">
+    <div class="cbox">
+      <h3>Still stuck? We'll help.</h3>
+      <p>Email us at <strong style="color:var(--gold)">support@roundclear.in</strong><br>We respond within 24 hours on working days.</p>
+      <div class="cbtns">
+        <a href="mailto:support@roundclear.in" class="cbtn p">📧 Email Support</a>
+        <a href="download.html" class="cbtn s">⬇ Download App</a>
+        <a href="index.html" class="cbtn s">🏠 Home</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>RoundClear AI · Real-time Interview Copilot · <a href="mailto:support@roundclear.in">support@roundclear.in</a></p>
+  <p style="margin-top:6px"><a href="index.html">Home</a> · <a href="download.html">Download</a> · <a href="guide.html">Guide</a></p>
+</footer>
+
+<script>
+function tf(el) {
+  const item = el.parentElement;
+  const open = item.classList.contains('open');
+  document.querySelectorAll('.faq').forEach(f => f.classList.remove('open'));
+  if (!open) item.classList.add('open');
+}
+const obs = new IntersectionObserver(
+  e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('v') }),
+  { threshold: 0.08 }
+);
+document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
