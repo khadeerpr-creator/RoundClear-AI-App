@@ -3,7 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Use RoundClear AI — Complete Guide</title>
+<title>How to Use RoundClear AI — Complete Setup & Interview Guide</title>
+<meta name="description" content="Step-by-step guide to setting up and using RoundClear AI interview copilot. Works with Zoom, Teams, Google Meet. Free 30 minutes — no signup needed.">
+<link rel="canonical" href="https://roundclear.in/guide.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"App is not picking up audio from Zoom / Teams","acceptedAnswer":{"@type":"Answer","text":"Make sure you selected System Audio mode. System Audio captures sound through your speakers or headphones."}},
+    {"@type":"Question","name":"Can I use RoundClear AI on Mac?","acceptedAnswer":{"@type":"Answer","text":"Yes — download the .dmg from roundclear.in/download.html. Works on macOS 12 and above."}},
+    {"@type":"Question","name":"Is my audio recorded or stored?","acceptedAnswer":{"@type":"Answer","text":"No. Audio is processed in real-time and immediately discarded. We do not store any recordings."}}
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -152,7 +165,7 @@ footer a:hover{color:var(--gold)}
     </div>
     <div class="grid2">
       <div class="card"><div class="card-icon">🎙️</div><div class="card-title">Listens to your interview</div><div class="card-desc">Captures audio live from Zoom, Teams, Google Meet, or your microphone — automatically, no button pressing.</div></div>
-      <div class="card"><div class="card-icon">⚡</div><div class="card-title">Transcribes instantly</div><div class="card-desc">Converts the interviewer's spoken question to text using Groq Whisper AI in under 3 seconds.</div></div>
+      <div class="card"><div class="card-icon">⚡</div><div class="card-title">Transcribes instantly</div><div class="card-desc">Converts the interviewer's spoken question to text using Deepgram Nova-3 AI in under 1 second.</div></div>
       <div class="card"><div class="card-icon">🤖</div><div class="card-title">Generates expert answers</div><div class="card-desc">Claude Sonnet AI creates precise, technical answers tailored to your role, company, and round type.</div></div>
       <div class="card"><div class="card-icon">🎯</div><div class="card-title">You speak confidently</div><div class="card-desc">Read the answer on screen and deliver it naturally — no memorisation, no hesitation.</div></div>
     </div>
@@ -240,7 +253,7 @@ footer a:hover{color:var(--gold)}
         <div class="step-n"><div class="step-circle">05</div></div>
         <div class="step-body">
           <div class="step-title">Select Audio Mode</div>
-          <div class="step-desc">Choose how the app captures audio. See <a href="#audio" style="color:var(--gold)">Audio Modes</a> below to pick the right one for your interview type.</div>
+          <div class="step-desc">RoundClear uses <strong>System Audio</strong> by default — captures the interviewer's voice directly from your video call. No configuration needed.</div>
         </div>
       </div>
     </div>
@@ -252,7 +265,7 @@ footer a:hover{color:var(--gold)}
   <div class="section fi" id="audio">
     <div class="sec-hdr">
       <div class="sec-num b">🔊</div>
-      <div><div class="sec-title">Audio Modes</div><div class="sec-sub">Wrong mode = no transcription — pick carefully</div></div>
+      <div><div class="sec-title">Audio Modes</div><div class="sec-sub">System audio captures your video call automatically — no mic noise</div></div>
     </div>
     <div class="modes">
       <div class="mode">
@@ -262,22 +275,9 @@ footer a:hover{color:var(--gold)}
           <div class="mode-desc">Captures everything playing through your computer — Zoom, Teams, Google Meet. The interviewer's voice is captured directly, clean and clear.<br><br><strong style="color:var(--text)">Use for:</strong> All online interviews on any video call platform.</div>
         </div>
       </div>
-      <div class="mode">
-        <div class="mode-icon">🎤</div>
-        <div>
-          <div class="mode-name">Microphone</div>
-          <div class="mode-desc">Captures audio from your physical microphone — picks up sound in the room.<br><br><strong style="color:var(--text)">Use for:</strong> In-person interviews, walk-in interviews, phone calls on speaker.</div>
-        </div>
-      </div>
-      <div class="mode">
-        <div class="mode-icon">🔀</div>
-        <div>
-          <div class="mode-name">Both <span class="badge b-gold">FULL COVERAGE</span></div>
-          <div class="mode-desc">Captures system audio and microphone simultaneously.<br><br><strong style="color:var(--text)">Use for:</strong> Hybrid interviews — some participants remote, some in the room.</div>
-        </div>
-      </div>
+
     </div>
-    <div class="info">ℹ️ System Audio only works in the installed .exe app — not in developer/source mode.</div>
+    <div class="info">ℹ️ System Audio captures the interviewer's voice from your video call directly — no mic noise. Works on both Windows and Mac (Mac uses system loopback).</div>
   </div>
 
   <div class="divider"></div>
@@ -347,7 +347,7 @@ footer a:hover{color:var(--gold)}
     <div class="pgrid">
       <div class="pcard">
         <div class="pname">Free</div>
-        <div class="pamount">₹0</div>
+        <div class="pamount" style="font-size:28px;color:var(--green)">Free</div>
         <div class="pdur">30 minutes — every session</div>
         <ul class="plist">
           <li>Full AI answer generation</li>
@@ -359,13 +359,13 @@ footer a:hover{color:var(--gold)}
       </div>
       <div class="pcard hot">
         <div class="pname">Pro Pack</div>
-        <div class="pamount">₹2,500 <sub>/ $30</sub></div>
+        <div class="pamount">$19.99</div>
         <div class="pdur">120 minutes — never expires</div>
         <ul class="plist">
           <li>Everything in Free</li>
           <li>120 minutes total</li>
           <li>Carries across sessions</li>
-          <li>UPI, card, net banking</li>
+          <li>Cards · PayPal · International</li>
           <li>Activates instantly</li>
         </ul>
       </div>
@@ -388,11 +388,11 @@ footer a:hover{color:var(--gold)}
       </div>
       <div class="faq">
         <div class="faq-q" onclick="tf(this)">Answer is not showing or takes too long<span class="faq-arr">+</span></div>
-        <div class="faq-a">Almost always a slow internet connection. The app sends audio to Groq for transcription, then to Claude for answer generation — both need a stable connection. Use WiFi, not mobile hotspot, during interviews. If consistently slow, check your backend is still running on Railway.</div>
+        <div class="faq-a">Almost always a slow internet connection. The app sends audio to Deepgram Nova-3 for transcription, then to Claude for answer generation — both need a stable connection. Use WiFi, not mobile hotspot, during interviews. If consistently slow, check your backend is still running on Railway.</div>
       </div>
       <div class="faq">
         <div class="faq-q" onclick="tf(this)">Question was transcribed incorrectly<span class="faq-arr">+</span></div>
-        <div class="faq-a">Whisper AI can mishear technical terms. To improve: upload your resume (adds your tech stack as hints to the transcription), ensure the interviewer's audio is clear, and avoid speaking over each other. If one question comes through wrong — wait for the next one, don't try to correct it mid-interview.</div>
+        <div class="faq-a">Deepgram Nova-3 can occasionally mishear technical terms. To improve: upload your resume (adds your tech stack as hints to the transcription), ensure the interviewer's audio is clear, and avoid speaking over each other. If one question comes through wrong — wait for the next one, don't try to correct it mid-interview.</div>
       </div>
       <div class="faq">
         <div class="faq-q" onclick="tf(this)">Windows blocked the app or shows "Unknown Publisher"<span class="faq-arr">+</span></div>
@@ -400,11 +400,11 @@ footer a:hover{color:var(--gold)}
       </div>
       <div class="faq">
         <div class="faq-q" onclick="tf(this)">Payment went through but minutes were not added<span class="faq-arr">+</span></div>
-        <div class="faq-a">This can happen if the app crashed right after payment. Email <a href="mailto:support@roundclear.in" style="color:var(--gold)">support@roundclear.in</a> with your Razorpay payment ID (starts with <code>pay_</code>) and we will manually activate your minutes within 24 hours.</div>
+        <div class="faq-a">This can happen if the app crashed right after payment. Email <a href="mailto:support@roundclear.in" style="color:var(--gold)">support@roundclear.in</a> with your Dodo payment ID from your payment confirmation email and we will manually activate your minutes within 24 hours.</div>
       </div>
       <div class="faq">
         <div class="faq-q" onclick="tf(this)">Can I use RoundClear AI on Mac?<span class="faq-arr">+</span></div>
-        <div class="faq-a">Mac version is in development. Email <a href="mailto:support@roundclear.in" style="color:var(--gold)">support@roundclear.in</a> with subject <strong>"Mac Waitlist"</strong> and you will be notified as soon as it's available.</div>
+        <div class="faq-a">Yes — Mac is supported. Download the <code>.dmg</code> from <a href="download.html" style="color:var(--gold)">roundclear.in/download.html</a>. On Mac, use earphones during online interviews so the interviewer's voice is captured clearly.</div>
       </div>
       <div class="faq">
         <div class="faq-q" onclick="tf(this)">Is my audio recorded or stored anywhere?<span class="faq-arr">+</span></div>
