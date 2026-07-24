@@ -36,7 +36,7 @@ Claude AI generates structured answer
 Answer appears on your screen in 1.5s ✅
 
 Pricing
-PlanMinutesPriceFree30 minutes₹0 / $0Pro Pack120 minutes₹2,500 / $30
+PlanMinutesPriceFree30 minutes₹0 / $0Pro Pack120 minutes $19.99
 Minutes never expire. Use across sessions.
 
 Support
@@ -54,7 +54,7 @@ Both — system + mic combined
 💰 PRICING
 
 Free — 30 minutes per session
-Paid — ₹2,500 for 120 minutes (Razorpay — UPI, cards, net banking)
+Paid — $19.99 for 120 minutes
 
 💻 SYSTEM REQUIREMENTS
 
