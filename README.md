@@ -20,10 +20,11 @@ Download
 👉 Download for Windows (Free)
 
 Platform: 
-Windows 10 / 11 (64-bit) 
-MacBook (x64.dmg/arm64.dmg)
-No subscription required — 30 minutes free on first install
+1. Windows 10/11 — 64-bit
+2. Apple Silicon (MI/M2/M3/M4)
+3. Intel Mac
 
+No subscription required — 30 minutes free on first install
 
 How It Works
 Your Interview Call (Zoom / Teams / Meet)
