@@ -1,4 +1,4 @@
-🎙️ RoundClear AI v1.0.2 — Real-time Interview Copilot
+🎙️ RoundClear AI v2.0.0 — Real-time Interview Copilot
 
 RoundClear AI listens to your interview in real-time and instantly generates expert answers you can speak confidently.
 
@@ -16,7 +16,7 @@ Features
 
 Download
 👉 Download for Windows (Free)
-👉Macbook
+👉 Macbook
 
 Platform: 
 1. Windows 10/11 — 64-bit
@@ -49,8 +49,6 @@ Support
 🔊 AUDIO MODES
 
 System Audio — captures Zoom, Teams, Google Meet, Skype automatically
-Microphone — for in-person interviews
-Both — system + mic combined
 
 💰 PRICING
 
@@ -65,7 +63,7 @@ Paid — $19.99 for 120 minutes
 
 📥 INSTALLATION
 
-Download RoundClear AI Setup 1.0.2.exe below
+Download RoundClear AI Setup 2.0.0.exe below
 Run installer — click Next → Install
 Launch from Desktop shortcut
 Click Start Session
