@@ -90,14 +90,24 @@ footer a:hover{color:var(--gold)}
 </style>
 <script>
 const DOWNLOAD_URLS = {
-  'win-x64':       'https://github.com/khadeerpr-creator/RoundClear-AI/releases/download/v1.0.2/RoundClear.AI.Setup.1.0.2.exe',
-  'mac-universal': ''
+  'win-x64':       'https://github.com/khadeerpr-creator/2.0_RoundclearAI/releases/download/v0.1.0/RoundClearAI_0.1.0_x64-setup.exe',
+  'mac-universal': null
 };
+// Auto-select tab from landing page click or URL param
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const os = params.get('os') || sessionStorage.getItem('rc_os') || detectOS();
+  if (os === 'mac') switchOS('mac');
+  sessionStorage.removeItem('rc_os');
+});
+function detectOS() {
+  return /Mac|iPhone|iPad/.test(navigator.userAgent) ? 'mac' : 'win';
+}
 function triggerDownload(platform) {
   const url = DOWNLOAD_URLS[platform];
   if (!url) {
-    alert('Mac version coming soon! Email support@roundclear.in to join the waitlist.');
-    return false;
+    // Not available yet (e.g. Mac build pending) — href="#" is a harmless no-op
+    return true;
   }
   const a = document.createElement('a');
   a.href = url;
@@ -133,7 +143,7 @@ function switchOS(os) {
   <p>Install in 60 seconds. Works with Zoom, Teams, Google Meet, and any interview platform.</p>
   <div class="version-badge">
     <div class="v-dot"></div>
-    <span>v1.0.2 · Latest stable release</span>
+    <span>Latest stable release</span>
   </div>
 </div>
 
@@ -157,7 +167,7 @@ function switchOS(os) {
         <div class="dl-platform-name">Windows</div>
         <div class="dl-platform-sub">Windows 10 / 11 — 64-bit · ~90 MB</div>
       </div>
-      <div class="dl-version">v1.0.2 · Latest</div>
+      <div class="dl-version">Latest</div>
     </div>
     <div class="dl-card-body">
       <a class="dl-btn" href="#" onclick="return triggerDownload('win-x64')">
@@ -180,13 +190,18 @@ function switchOS(os) {
       <div class="dl-platform-icon">🍎</div>
       <div>
         <div class="dl-platform-name">macOS</div>
-        <div class="dl-platform-sub">Coming soon — join waitlist below</div>
+        <div class="dl-platform-sub">Intel &amp; Apple Silicon · macOS 12+</div>
       </div>
     </div>
     <div class="dl-card-body">
-      <a class="dl-btn" href="/cdn-cgi/l/email-protection#f88b8d8888978a8cb88a978d969c9b949d998ad69196c78b8d9a929d9b8cc5b5999bddcac8af99918c94918b8cddcac8d5ddcac8aa978d969cbb949d998addcac8b9b1" style="background:var(--bg4);color:var(--text2);box-shadow:none">
-        📬 Join Mac Waitlist
+      <a class="dl-btn" href="#" onclick="return triggerDownload('mac-universal')">
+        <span class="dl-btn-icon">⬇</span>
+        Download RoundClear AI for Mac
+        <span style="font-size:12px;opacity:.7;font-weight:600;margin-left:4px">Free</span>
       </a>
+      <div style="margin-top:12px;padding:10px 14px;background:rgba(0,204,150,.06);border:1px solid rgba(0,204,150,.15);border-radius:8px;font-size:12px;color:#546075;line-height:1.6">
+        💡 <strong style="color:#ccd6f0">Mac note:</strong> Uses microphone for audio capture. For online interviews, use earphones so the interviewer's voice is picked up by your mic.
+      </div>
     </div>
   </div>
 </div>
@@ -214,7 +229,7 @@ function switchOS(os) {
     <div class="step-num">1</div>
     <div class="step-content">
       <div class="step-title">Run the installer</div>
-      <div class="step-sub">Open <code>RoundClear.AI.Setup.1.0.2.exe</code> from your Downloads folder.</div>
+      <div class="step-sub">Open <code>RoundClearAI_0.1.0_x64-setup.exe</code> from your Downloads folder.</div>
     </div>
   </div>
   <div class="step">
@@ -270,4 +285,15 @@ function switchOS(os) {
   <p style="margin-top:6px">
     <a href="/cdn-cgi/l/email-protection#fd8e888d8d928f89bd8f928893999e91989c8fd39493"><span class="__cf_email__" data-cfemail="5724222727382523172538223933343b323625793e39">[email&#160;protected]</span></a>
     &nbsp;·&nbsp;
-    <a href="index.html">Hom
+    <a href="index.html">Home</a>
+    &nbsp;·&nbsp;
+    <a href="guide.html">Guide</a>
+    &nbsp;·&nbsp;
+    <a href="privacy.html">Privacy</a>
+    &nbsp;·&nbsp;
+    <a href="terms.html">Terms</a>
+  </p>
+</footer>
+
+</body>
+</html>
