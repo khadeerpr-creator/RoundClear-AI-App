@@ -19,8 +19,9 @@ Features
 Download
 👉 Download for Windows (Free)
 
-Platform: Windows 10 / 11 (64-bit)
-Size: ~85 MB
+Platform: 
+Windows 10 / 11 (64-bit) 
+MacBook (x64.dmg/arm64.dmg)
 No subscription required — 30 minutes free on first install
 
 
