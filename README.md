@@ -11,13 +11,12 @@ Features
 🎙 Real-time listening — captures interviewer questions directly from your speakers
 ⚡ Answers in 1.5s — AI generates structured bullet-point answers instantly
 🌐 Every domain — Tech, Finance, Marketing, HR, Data, Product, Cybersecurity and more
-📄 Resume-aware — upload your resume for personalised answers using your real experience
 🔒 100% private — nothing is recorded or stored. Audio is processed and discarded instantly
 🖥 Windows desktop app — lightweight, runs silently in the background
 
-
 Download
 👉 Download for Windows (Free)
+👉Macbook
 
 Platform: 
 1. Windows 10/11 — 64-bit
@@ -60,16 +59,15 @@ Paid — $19.99 for 120 minutes
 
 💻 SYSTEM REQUIREMENTS
 
-Windows 10/11 — 64-bit
-4GB RAM minimum
-Internet connection required
+1. Windows 10/11 — 64-bit
+2. Apple Silicon (MI/M2/M3/M4)
+3. Intel Mac
 
 📥 INSTALLATION
 
 Download RoundClear AI Setup 1.0.2.exe below
 Run installer — click Next → Install
 Launch from Desktop shortcut
-Enter your Railway backend URL in Settings
 Click Start Session
 
 ⚠️ WINDOWS SECURITY NOTE
