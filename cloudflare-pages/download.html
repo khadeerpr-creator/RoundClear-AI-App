@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Download RoundClear AI — Real-time Interview Copilot</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&family=DM+Mono&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -18,7 +21,10 @@
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;min-height:100vh}
 /* NAV */
 nav{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(7,9,15,.95);backdrop-filter:blur(12px);z-index:100}
-.nav-logo{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--gold);letter-spacing:-.5px}
+.nav-logo{display:flex;align-items:center;gap:8px;font-family:'Syne',sans-serif;font-size:18px;font-weight:800;letter-spacing:-.5px}
+.nav-logo-img{height:38px;width:auto;display:block}
+.nav-logo-round{color:#FEFEFE}
+.nav-logo-clear{color:#E8B84B}
 .nav-links{display:flex;align-items:center;gap:20px}
 .nav-back{font-size:13px;color:var(--text2);text-decoration:none;transition:color .2s}
 .nav-back:hover{color:var(--gold)}
@@ -130,7 +136,11 @@ function switchOS(os) {
 </head>
 <body>
 <nav>
-  <div class="nav-logo">⬡ RoundClear AI</div>
+  <div class="nav-logo">
+    <!-- Logo updated -->
+    <img src="logo.png" alt="" class="nav-logo-img">
+    <span><span class="nav-logo-round">Round</span><span class="nav-logo-clear">Clear AI</span></span>
+  </div>
   <div class="nav-links">
     <a href="guide.html" class="nav-back">📖 Setup Guide</a>
     <a href="index.html" class="nav-back">← Home</a>
@@ -153,7 +163,7 @@ function switchOS(os) {
     <span class="os-icon">🪟</span> Windows
   </button>
   <button class="os-tab" id="tab-mac" onclick="switchOS('mac')">
-    <span class="os-icon">🍎</span> macOS
+    <span class="os-icon">🍎</span> MacOS
     <span style="font-size:10px;opacity:.6;font-weight:400">(soon)</span>
   </button>
 </div>
@@ -189,15 +199,15 @@ function switchOS(os) {
     <div class="dl-card-header">
       <div class="dl-platform-icon">🍎</div>
       <div>
-        <div class="dl-platform-name">macOS</div>
+        <div class="dl-platform-name">MacOS</div>
         <div class="dl-platform-sub">Intel &amp; Apple Silicon · macOS 12+</div>
       </div>
     </div>
     <div class="dl-card-body">
       <a class="dl-btn" href="#" onclick="return triggerDownload('mac-universal')">
         <span class="dl-btn-icon">⬇</span>
-        Download RoundClear AI for Mac
-        <span style="font-size:12px;opacity:.7;font-weight:600;margin-left:4px">Free</span>
+        Download for MacOS - Free
+        <span style="font-size:12px;opacity:.7;font-weight:600;margin-left:4px"></span>
       </a>
       <div style="margin-top:12px;padding:10px 14px;background:rgba(0,204,150,.06);border:1px solid rgba(0,204,150,.15);border-radius:8px;font-size:12px;color:#546075;line-height:1.6">
         💡 <strong style="color:#ccd6f0">Mac note:</strong> Uses microphone for audio capture. For online interviews, use earphones so the interviewer's voice is picked up by your mic.
@@ -211,7 +221,7 @@ function switchOS(os) {
   <div class="fb-icon">⚡</div>
   <div class="fb-text">
     <strong>30 minutes free — no sign-up required.</strong>
-    Need more? Upgrade to Pro for 120 minutes at ₹2,500 or $30. Minutes never expire and carry across sessions.
+    Need more? Upgrade to Pro for 120 minutes at $19.99. Minutes never expire and carry across sessions.
   </div>
 </div>
 
@@ -265,7 +275,7 @@ function switchOS(os) {
 <!-- GUIDE CTA -->
 <div class="guide-cta">
   <div class="gc-left">
-    <div class="gc-title">📖 First time using RoundClear?</div>
+    <div class="gc-title">📖 First time using RoundClear AI?</div>
     <div class="gc-sub">The setup guide walks you through audio configuration, resume upload, and getting the best answers.</div>
   </div>
   <a href="guide.html" class="gc-btn">Read Guide →</a>
