@@ -1,4 +1,4 @@
-🎙️ RoundClear AI v2.0.0 — Real-time Interview Copilot
+🎙️ RoundClear AI v2.1.0 — Real-time Interview Copilot
 
 RoundClear AI listens to your interview in real-time and instantly generates expert answers you can speak confidently.
 
